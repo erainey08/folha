@@ -1,0 +1,33 @@
+<%= form_for(@vinculo) do |f| %>
+  <% if @vinculo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vinculo.errors.count, "error") %> prohibited this vinculo from being saved:</h2>
+
+      <ul>
+      <% @vinculo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matricula %><br>
+    <%= f.number_field :matricula %>
+  </div>
+  <div class="field">
+    <%= f.label :dt_admissao %><br>
+    <%= f.date_select :dt_admissao %>
+  </div>
+  <div class="field">
+    <%= f.label :cargo_id %><br>
+    <%= f.number_field :cargo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :funcionario_id %><br>
+    <%= f.number_field :funcionario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

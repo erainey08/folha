@@ -1,0 +1,33 @@
+<h1>Listing vinculos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Dt admissao</th>
+      <th>Cargo</th>
+      <th>Funcionario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>  
+
+  <tbody>
+    <% @vinculos.each do |vinculo| %>
+      <tr>
+        <td><%= vinculo.matricula %></td>
+        <td><%= vinculo.dt_admissao %></td>
+        <td><%= vinculo.cargo_id %></td>
+        <td><%= vinculo.funcionario_id %></td>
+        <td><%= link_to 'Show', vinculo %></td>
+        <td><%= link_to 'Edit', edit_vinculo_path(vinculo) %></td>
+        <td><%= link_to 'Destroy', vinculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vinculo', new_vinculo_path %>

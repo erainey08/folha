@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matricula: 1
+  dt_admissao: 2013-12-30
+  cargo_id: 1
+  funcionario_id: 1
+
+two:
+  matricula: 1
+  dt_admissao: 2013-12-30
+  cargo_id: 1
+  funcionario_id: 1

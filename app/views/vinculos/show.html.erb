@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @vinculo.matricula %>
+</p>
+
+<p>
+  <strong>Dt admissao:</strong>
+  <%= @vinculo.dt_admissao %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @vinculo.cargo_id %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= @vinculo.funcionario.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_vinculo_path(@vinculo) %> |
+<%= link_to 'Back', vinculos_path %>
